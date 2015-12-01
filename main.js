@@ -82,5 +82,6 @@ $('#next').on("click", function(){
 // At end of quiz, display message that quiz is over and display final score
 // if answer is correct, move to next question after short pause
 
+// Workflow tips for branching
 
 
