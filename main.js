@@ -1,5 +1,5 @@
 var question1 = {
-		question: "What does the in CSS stand for?",
+		question: "What does the C in CSS stand for?",
 		answer1: "Computer",
 		answer2: "Cascading",
 		answer3: "Creative",
@@ -78,7 +78,7 @@ var question9 = {
 }
 
 var question10 = { 
-		question: "How do you add code to the staging area, in git?",
+		question: "How do you add code to the staging area in git?",
 		answer1: "git commit",
 		answer2: "git push",
 		answer3: "git branch",
