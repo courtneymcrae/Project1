@@ -1,9 +1,15 @@
 body { 
     display: block;
     margin: 8px;
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: 'Architects Daughter', cursive;
     font-size: 30px;
-    background: #1BC1C1; 
+    background: url(school.png); 
+    cursor: pointer;
+    letter-spacing: .5px;
+}
+
+.rules {
+	width: 620px;
 }
 
 #question {
@@ -35,6 +41,16 @@ h1 {
 	font-size: 18px;
 }
 
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 3px;
+}
+
 .btn {
 	border-radius: 5px;
 	background-color: #0075CC;
@@ -43,7 +59,7 @@ h1 {
 	width: 200px;
 	text-align: center;
 	padding: 15px;
-	margin: 9px auto;
+	margin: 25px auto;
 }
 
 .start {
@@ -53,10 +69,18 @@ h1 {
 	font-size: 20px;
 	width: 300px;
 	text-align: center;
+	display: block;
 	padding: 15px auto;
-	margin: 9px auto;
+	margin: 15px auto;
 
 }
+
+
+.scoreRight {
+	float: right;
+}
+
+
 
 
 
