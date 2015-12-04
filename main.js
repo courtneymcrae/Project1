@@ -30,7 +30,7 @@ var question4 = {
 		answer2: "&lt;script href='xxx.js'&gt",
 		answer3: "&lt;script name='xxx.js'&gt",
 		answer4: "&lt;script src='xxx.css'&gt",
-		correct_answer: "&lt;script src='xxx.js'&gt"
+		correct_answer: "&lt;script src='xxx.js'&gt;"
 }
 
 var question5 = { 
@@ -38,7 +38,7 @@ var question5 = {
 		answer1: "$(document).ready()",
 		answer2: "$(body).onload()",
 		answer3: "$(document).load()",
-		correct_answer: "$(document.ready()"
+		correct_answer: "$(document).ready()"
 }
 
 var question6 = { 
@@ -56,33 +56,34 @@ var question7 = {
 		answer2: "a {underline:none;}",
 		answer3: "a {text-decoration:no-underline;}",
 		answer4: "a {decoration:no-underline;}",
-		correct_answer: "{text-decoration: no-underline"
+		correct_answer: "a {text-decoration:no-underline;}"
 }
 
 var question8 = { 
 		question: "Comments are done in CSS with what opening and closing symbols?",
 		answer1: "** to open and ** to close",
-		answer2: " /* to open and */ to close",
+		answer2: "/* to open and */ to close",
 		answer3: "// to open and // to close",
 		answer4: " !-- to open and --! to close",
 		correct_answer: "/* to open and */ to close"
 }
 
 var question9 = { 
-		question: "In CSS, how would you select all the <p> tags on a page?",
+		question: "In CSS, how would you select all the p tags on a page?",
 		answer1: "p { }",
 		answer2: "#p { }",
 		answer3: ".p { }",
-		answer4: "<p> { }",
+		answer4: "{ }",
 		correct_answer: "p { }"
 }
 
 var question10 = { 
-		question: "How does a WHILE loop start?",
-		answer1: "while (i <= 10)",
-		answer2: "while i = 1 to 10",
-		answer3: "while (i <= 10; i++)",
-		correct_answer: "while (i < 10)"
+		question: "How do you add code to the staging area, in git?",
+		answer1: "git commit",
+		answer2: "git push",
+		answer3: "git branch",
+		answer4: "git add",
+		correct_answer: "git add"
 }
 
 
@@ -133,8 +134,9 @@ function play (q) {
 }
 
 $(".answers").on("click", function (a) {
-	console.log(a)
-	if (this.innerHTML === list[currentQuestion].correct_answer){
+	console.log("clicked = " + this.innerHTML)
+	console.log("correct_answer = " + list[currentQuestion].correct_answer)
+	if (this.innerHTML === list[currentQuestion].correct_answer){ //looking for exact match of what is clicked to the correct answer property of the question. 
 		console.log("correct")
 		this.innerHTML = "CORRECT!";
 		playerScore += 2;
@@ -177,9 +179,11 @@ function next () {
 function endTurn (player) {
 	if (player == 'p1') {
 		p1score =playerScore
+		$("#p1score").html(p1score)
 		alert( "Now it's players 2 turn!" )
 	} else {
-		p2score = playerScore 	
+		p2score = playerScore 
+		$("#p2score").html(p2score)	
 	} 
 		playerScore = 0
 		$('#score').html(playerScore)
