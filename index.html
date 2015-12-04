@@ -3,15 +3,37 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 	<title>Trivia</title>
 </head>
 <body>
-	<div class="container">
-		<h1>Trivia Game</h1>
+<div class="container">
 
-		<div class="btn" id="play">Play!</div>
+<h1>Computer Trivia</h1>
 
-			<div> Your score = <p id="score">0</p></div> 
+<div class="rules">
+<h2>Game Format</h2>
+<ul>
+<li>Computer Trivia is a 10 questions trivia game.</li>
+<li>Played by two players.</li>
+<li>Player 1 answers 10 multiple choice questions. </li>
+<li>Each correct answer is worth 2 points. </li>
+<li>Each incorrect answer is -1 point. </li>
+<li>Player 2 then answers 10 multiple choice questions. </li>
+<li>The player with the highest score wins. </li>
+<li>Each player has the option to use one hint per game which will remove two wrong answers. </li>
+<h2>Game Rules</h2>
+<li>No use of cell phones or other outside reference materials. Brain power only.</li>
+</ul>
+
+
+<button class="start">START</button>
+</div>
+<div class="game">
+
+
+
+			<div> Your score = <span id="score">0</span></div>
 
 		<hr>	
 
@@ -22,14 +44,21 @@
 			<li id="answer2" class="answers">Answer 2</li>
 			<li id="answer3" class="answers">Answer 3</li>
 			<li id="answer4" class="answers">Answer 4</li>
-
 		</ul>
 
 		<hr>
 
-		<div class="btn" id="next">	Next Question</div>
+		<div class="results">
+			<h3>Player 1 Score:<span id="p1score">0<span></h3>
+			<h3>Player 2 Score:<span id="p2score">0<span></h3>
+		</div>
+		<!-- <div class="btn" id="next">	Next Question</div> -->
 	</div>
-
+	</div>
+	
+	<!-- <h3>class="winner"></h3> -->
+	</div>
+</body>
 
 	<script type="text/javascript" src="main.js"></script>
 </body>
